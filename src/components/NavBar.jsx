@@ -9,9 +9,9 @@ const NavBar = () => {
           #vanlife
         </Link>
         <nav className="page-links">
-          <Link to="/">home</Link>
-          <br />
           <Link to="/about">about</Link>
+          <br />
+          <Link to="/vans">vans</Link>
         </nav>
       </header>
     </>
