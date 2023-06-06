@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getAllVansService } from "../services/vans";
-import VanComponent from "../components/VanComponent";
+import VanComponent from "../components/Vans/VanComponent";
 
 const Vans = () => {
   const [allVans, setAllVans] = useState([]);
