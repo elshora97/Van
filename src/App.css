@@ -19,6 +19,12 @@ body {
   scrollbar-width: none;
 }
 
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 header {
   height: 110px;
   display: flex;
@@ -48,6 +54,18 @@ header a:hover {
   text-decoration: underline;
 }
 
+.footer {
+  background-color: #161616;
+  color: #aaaaaa;
+  height: 74px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  font-weight: 500;
+}
+
 .page-links {
   display: flex;
   flex-direction: row;
@@ -68,6 +86,12 @@ header a:hover {
 
 .link-button:hover {
   transform: translate(1px, 1px);
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #161616;
 }
 
 /*** HOME PAGE ***/
@@ -314,16 +338,10 @@ i[class*="van-type-"] {
   font-weight: 600;
 }
 
-/* Footer */
-.footer {
-  background-color: #161616;
-  color: white;
-  text-align: center;
-  padding: 30px;
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.host-nav .active {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #161616;
 }
 
 /* media queries */
