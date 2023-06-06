@@ -20,6 +20,12 @@ const HostLayout = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "active" : null)}
+          to="/host/Vans"
+        >
+          Vans
+        </NavLink>
+        <NavLink
+          className={({ isActive }) => (isActive ? "active" : null)}
           to="/host/reviews"
         >
           Reviews
