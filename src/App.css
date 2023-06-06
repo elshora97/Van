@@ -314,6 +314,18 @@ i[class*="van-type-"] {
   font-weight: 600;
 }
 
+/* Footer */
+.footer {
+  background-color: #161616;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
 /* media queries */
 
 @media only screen and (max-width: 990px) {
