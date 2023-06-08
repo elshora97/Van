@@ -74,7 +74,7 @@ const HostVanDetails = () => {
               Photos
             </NavLink>
           </nav>
-          <Outlet />
+          <Outlet context={{ vanDetails }} />
         </div>
       </section>
     </>
