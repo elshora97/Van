@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getHostVanDetailsService } from "../../services/hostVans";
 
 const HostVanDetails = () => {
@@ -33,6 +33,14 @@ const HostVanDetails = () => {
   }
   return (
     <section>
+      <Link
+        //  to="/host/vans"
+        to=".."
+        relative="path"
+        className="back-button"
+      >
+        <span>&larr; </span> <span>Back to all vans</span>
+      </Link>
       <div className="host-van-detail-layout-container">
         <div className="host-van-detail">
           <img src={vanDetails.imageUrl} />
