@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Outlet, useParams, NavLink } from "react-router-dom";
 import { getHostVanDetailsService } from "../../services/hostVans";
 
 const HostVanDetails = () => {
@@ -32,28 +32,52 @@ const HostVanDetails = () => {
     return <h2>loading ...</h2>;
   }
   return (
-    <section>
-      <Link
-        //  to="/host/vans"
-        to=".."
-        relative="path"
-        className="back-button"
-      >
-        <span>&larr; </span> <span>Back to all vans</span>
-      </Link>
-      <div className="host-van-detail-layout-container">
-        <div className="host-van-detail">
-          <img src={vanDetails.imageUrl} />
-          <div className="host-van-detail-info-text">
-            <i className={`van-type van-type-${vanDetails.type}`}>
-              {vanDetails.type}
-            </i>
-            <h3>{vanDetails.name}</h3>
-            <h4>${vanDetails.price}/day</h4>
+    <>
+      <section>
+        <Link
+          //  to="/host/vans"
+          to=".."
+          relative="path"
+          className="back-button"
+        >
+          <span>&larr; </span> <span>Back to all vans</span>
+        </Link>
+        <div className="host-van-detail-layout-container">
+          <div className="host-van-detail">
+            <img src={vanDetails.imageUrl} />
+            <div className="host-van-detail-info-text">
+              <i className={`van-type van-type-${vanDetails.type}`}>
+                {vanDetails.type}
+              </i>
+              <h3>{vanDetails.name}</h3>
+              <h4>${vanDetails.price}/day</h4>
+            </div>
           </div>
+          <nav className="host-van-detail-nav">
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : null)}
+              to="."
+              end
+            >
+              Details
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : null)}
+              to="pricing"
+            >
+              Price
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : null)}
+              to="photos"
+            >
+              Photos
+            </NavLink>
+          </nav>
+          <Outlet />
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
