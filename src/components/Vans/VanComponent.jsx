@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const VanComponent = ({ van }) => {
   return (
     <div className="van-tile">
-      <Link to={`/vans/${van.id}`}>
+      <Link to={van.id}>
         <img src={van.imageUrl} />
         <div className="van-info">
           <h3>{van.name}</h3>
