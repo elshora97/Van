@@ -79,7 +79,14 @@ const Vans = () => {
         </div>
         <div className="van-list">
           {displayedVans.map((van) => {
-            return <VanComponent van={van} key={van.id} />;
+            return (
+              <VanComponent
+                van={van}
+                key={van.id}
+                searchParams={searchParams}
+                typeFilter={typeFilter}
+              />
+            );
           })}
         </div>
       </div>

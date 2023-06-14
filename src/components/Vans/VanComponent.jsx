@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const VanComponent = ({ van }) => {
+const VanComponent = ({ van, searchParams, typeFilter }) => {
   return (
     <div className="van-tile">
-      <Link to={van.id}>
+      <Link
+        to={van.id}
+        state={{ search: searchParams.toString(), type: typeFilter }}
+      >
         <img src={van.imageUrl} />
         <div className="van-info">
           <h3>{van.name}</h3>
