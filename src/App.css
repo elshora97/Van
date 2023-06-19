@@ -483,6 +483,15 @@ i[class*="van-type-"] {
   border-radius: 5px;
 }
 
+.not-found-container {
+  padding-inline: 26px;
+}
+
+.not-found-container .link-button {
+  width: 100%;
+  background-color: #161616;
+  color: white;
+}
 /* media queries */
 
 @media only screen and (max-width: 990px) {

@@ -17,14 +17,15 @@ import HostVanDetails from "./pages/Host/HostVanDetails";
 import HostVanDetailsInfo from "./pages/Host/HostVanDetailsInfo";
 import HostVanDetailsPrice from "./pages/Host/HostVanDetailsPrice";
 import HostVanDetailsPhoto from "./pages/Host/HostVanDetailsPhoto";
+import Error from "./pages/Error";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<Home />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="vans" element={<Vans />} />
             <Route path="vans/:id" element={<VanDetails />} />
@@ -39,6 +40,7 @@ function App() {
                 <Route path="photos" element={<HostVanDetailsPhoto />} />
               </Route>
             </Route>
+            <Route path="*" element={<Error />} />
           </Route>
         </Routes>
       </BrowserRouter>
